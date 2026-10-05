@@ -4,9 +4,9 @@ Category: **Builder → Intelligent Contracts**
 
 Title: **NettingDesk: Consensus-gated optimal ledger netting**
 
-## Notes / Description (1016 characters)
+## Notes / Description (988 characters)
 
-> NettingDesk is a GenLayer primitive for permission-gated multilateral obligation cancellation. A fixed publisher supplies six positions in shared clearing units and prose operating clauses. Leader and validators independently fetch commit-pinned JSON, check SHA-256, classify every permission and verify source quotes. Exact ALLOW/DENY/UNKNOWN agreement defines cancellation capacities. An exhaustive integer solver maximizes canceled gross volume while preserving each party's net position; protected and uncertain positions cannot be reduced. Canonical ties, residual quantities and exclusions are stored onchain. Five finalized StudioNet receipts cover deployment, an unequal ring, a protected position, a global optimum beating bilateral greedy cancellation, and missing approval. The repo includes a pinned GenVM contract, 25 direct tests and an independent six-variable proof verifier. Synthetic publisher-declared snapshots demonstrate ledger compression, not proven debts, asset transfers or legal discharge.
+> NettingDesk is a GenLayer primitive for permission-gated multilateral obligation cancellation. A publisher supplies six positions in shared units and prose operating clauses. Leader and validators independently fetch commit-pinned JSON, check SHA-256, classify every permission and verify source quotes. Exact ALLOW/DENY/UNKNOWN agreement defines cancellation capacities. An exhaustive integer solver maximizes canceled gross volume while preserving each party's net position; protected and uncertain positions cannot be reduced. Canonical ties, residual quantities and exclusions are stored onchain. Five finalized StudioNet receipts cover deployment, an unequal ring, a protected position, a global optimum beating bilateral greedy cancellation, and missing approval. The repo includes a pinned GenVM contract, 25 tests and an independent six-variable verifier. Synthetic publisher-declared snapshots demonstrate ledger compression, not proven debts, asset transfers or legal discharge.
 
 ## Evidence
 
