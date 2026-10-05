@@ -1,0 +1,34 @@
+{
+  "positions": [
+    {
+      "id": "alpha-beta",
+      "amount": 6,
+      "clause": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required."
+    },
+    {
+      "id": "alpha-gamma",
+      "amount": 0,
+      "clause": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required."
+    },
+    {
+      "id": "beta-alpha",
+      "amount": 0,
+      "clause": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required."
+    },
+    {
+      "id": "beta-gamma",
+      "amount": 4,
+      "clause": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required."
+    },
+    {
+      "id": "gamma-alpha",
+      "amount": 5,
+      "clause": "This obligation must be paid gross. It must never be canceled or included in multilateral netting."
+    },
+    {
+      "id": "gamma-beta",
+      "amount": 0,
+      "clause": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required."
+    }
+  ]
+}
