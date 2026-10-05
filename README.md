@@ -34,7 +34,7 @@ With reductions `(a,b,c,d,e,f)` in position order, conservation gives `e=a+b-c` 
 - [Pinned GenVM contract](contracts/netting_desk.py)
 - [Consensus and algebra](docs/consensus.md)
 - [Source records](records)
-- [Direct tests](tests/direct/test_clearing.py)
+- [25 direct tests](tests/direct/test_clearing.py), including independent exhaustive binary-capacity optimality checks
 - [CLI deployment](deploy/00_netting_desk.js) and [proof runner](scripts/prove-scenarios.cjs)
 - [Independent six-variable proof verifier](scripts/verify-proofs.cjs)
 - [Onchain proof receipts](proofs/README.md)
