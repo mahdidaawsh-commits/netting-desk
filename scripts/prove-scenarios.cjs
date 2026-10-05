@@ -86,6 +86,19 @@ async function receipt(label, hash) {
   console.log('FINALIZED', label, hash, execution);
   return data;
 }
+async function writeBeforeSubmission(label,args){
+  for(let attempt=0;attempt<3;attempt++){
+    try{return await invoke(label,args);}
+    catch(error){
+      const saved=JSON.parse(fs.readFileSync(path.join(journal,label+'.json'),'utf8'));
+      const message=(saved.stdout||'')+'\n'+(saved.stderr||'');
+      // eth_gasPrice is read before signing; never retry submission errors.
+      if(saved.hash || !/eth_gasPrice/.test(message) || attempt===2)throw error;
+      console.log('PRE-SIGN RPC RETRY',label);
+      await new Promise(resolve=>setTimeout(resolve,30000));
+    }
+  }
+}
 async function rpc(method, params) {
   const response = await fetch('https://studio.genlayer.com/api', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jsonrpc: '2.0', id: 1, method, params }), signal: AbortSignal.timeout(30000) });
   const data = await response.json();
@@ -105,6 +118,8 @@ async function rpc(method, params) {
   }
   const deployed=result(await invoke('pool-deploy',['deploy']));
   const contract=deployed['Contract Address'], deployHash=deployed['Transaction Hash'];
+  const deployedCode=Buffer.from(await rpc('gen_getContractCode',[contract]),'base64');
+  if(!source.equals(deployedCode))throw Error('Existing deployed source mismatch');
   await receipt('pool-deploy',deployHash);
   const transactions=[{label:'pool-deploy',action:'deploy',hash:deployHash}];
   const steps=[
@@ -114,7 +129,7 @@ async function rpc(method, params) {
     // Leave room for receipt polls and shared gateway rate limits.
     await new Promise(resolve=>setTimeout(resolve,15000));
     const args=[sources[step.source].url,sources[step.source].sha256];
-    const output=await invoke(step.name,['write',contract,step.method,'--args',...args]);
+    const output=await writeBeforeSubmission(step.name,['write',contract,step.method,'--args',...args]);
     const hash=output.match(/Write Transaction Hash:\s*(0x[0-9a-f]{64})/i)?.[1];
     if(!hash) throw Error('Missing write hash');
     await receipt(step.name,hash);

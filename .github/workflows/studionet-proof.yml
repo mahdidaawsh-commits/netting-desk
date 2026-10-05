@@ -1,5 +1,12 @@
 name: StudioNet proof
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      resume_deploy_hash:
+        description: Existing finalized deployment hash; skips deploying again
+        required: false
+        default: ''
+        type: string
 permissions:
   contents: read
 jobs:
@@ -30,6 +37,7 @@ jobs:
           GENLAYER_CLI_PATH: ${{ github.workspace }}/node_modules/genlayer/dist/index.js
           NETTINGDESK_PASSWORD_FILE: ${{ github.workspace }}/.secrets/account-password.txt
           NETTINGDESK_ACCOUNT: netting-desk-proof
+          NETTINGDESK_RESUME_HASH: ${{ inputs.resume_deploy_hash }}
         run: node scripts/prove-scenarios.cjs
       - uses: actions/upload-artifact@v4
         if: always()

@@ -4,6 +4,7 @@ const path = require('node:path');
 module.exports = async function deployNettingDesk(client) {
   const policy = JSON.parse(fs.readFileSync(path.join(__dirname,'../config/policy.json'),'utf8'));
   const code = fs.readFileSync(path.join(__dirname, '../contracts/netting_desk.py'), 'utf8');
+  if(process.env.NETTINGDESK_RESUME_HASH && !/^0x[0-9a-f]{64}$/i.test(process.env.NETTINGDESK_RESUME_HASH)) throw Error('Invalid resume deployment hash');
   const hash = process.env.NETTINGDESK_RESUME_HASH || await client.deployContract({ code, args: [policy.source_repository], leaderOnly: false });
   console.log('Deployment Transaction Hash:', hash);
   const receipt = await client.waitForTransactionReceipt({ hash, retries: 300, interval: 3000, status: 'FINALIZED' });
