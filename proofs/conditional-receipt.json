@@ -1,0 +1,185 @@
+{
+  "hash": "0x8f4d1055b89a6b33fac38eeacd5fcebcde546faa41e4b8be67781a03495f231c",
+  "from_address": "0xd66533615453eC05211F9cAD37dE77129F1E26A5",
+  "to_address": "0xDBf83c382Aae585FB3f79Aa8b770833701C164c2",
+  "data": {
+    "calldata": {
+      "readable": "{\"args\":[\"https://raw.githubusercontent.com/mahdidaawsh-commits/netting-desk/0f61028320be572b684fccc74d7babef350d4f0a/records/conditional.json\",\"6fdd6ffe41f641510982e97562a5ced79ce36395c86e45e563c4ea5d0ba5a3d3\",]\"method\":\"clear\"}"
+    }
+  },
+  "status": 7,
+  "result": 6,
+  "consensus_data": {
+    "votes": {
+      "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "agree",
+      "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "agree",
+      "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "agree",
+      "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "idle",
+      "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "disagree"
+    },
+    "leader_receipt": [
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "leader",
+        "vote": null,
+        "calldata": {
+          "readable": "{\"args\":[\"https://raw.githubusercontent.com/mahdidaawsh-commits/netting-desk/0f61028320be572b684fccc74d7babef350d4f0a/records/conditional.json\",\"6fdd6ffe41f641510982e97562a5ced79ce36395c86e45e563c4ea5d0ba5a3d3\",]\"method\":\"clear\"}"
+        },
+        "eq_outputs": {
+          "0": {
+            "status": "return",
+            "payload": {
+              "readable": "{\"record\":{\"positions\":[{\"amount\":6\"clause\":\"This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required.\"\"id\":\"alpha-beta\"},{\"amount\":0\"clause\":\"This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required.\"\"id\":\"alpha-gamma\"},{\"amount\":0\"clause\":\"This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required.\"\"id\":\"beta-alpha\"},{\"amount\":4\"clause\":\"This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required.\"\"id\":\"beta-gamma\"},{\"amount\":5\"clause\":\"Cancellation requires written administrator approval. This record does not state whether approval was obtained.\"\"id\":\"gamma-alpha\"},{\"amount\":0\"clause\":\"This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required.\"\"id\":\"gamma-beta\"},]}\"report\":{\"permissions\":[{\"decision\":\"ALLOW\"\"id\":\"alpha-beta\"\"quote\":\"This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required.\"},{\"decision\":\"ALLOW\"\"id\":\"alpha-gamma\"\"quote\":\"This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required.\"},{\"decision\":\"ALLOW\"\"id\":\"beta-alpha\"\"quote\":\"This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required.\"},{\"decision\":\"ALLOW\"\"id\":\"beta-gamma\"\"quote\":\"This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required.\"},{\"decision\":\"UNKNOWN\"\"id\":\"gamma-alpha\"\"quote\":\"Cancellation requires written administrator approval. This record does not state whether approval was obtained.\"},{\"decision\":\"ALLOW\"\"id\":\"gamma-beta\"\"quote\":\"This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required.\"},]}}"
+            }
+          }
+        },
+        "result": {
+          "status": "return",
+          "payload": {
+            "readable": "null"
+          }
+        }
+      },
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "agree",
+        "calldata": {
+          "readable": "{\"args\":[\"https://raw.githubusercontent.com/mahdidaawsh-commits/netting-desk/0f61028320be572b684fccc74d7babef350d4f0a/records/conditional.json\",\"6fdd6ffe41f641510982e97562a5ced79ce36395c86e45e563c4ea5d0ba5a3d3\",]\"method\":\"clear\"}"
+        },
+        "result": {
+          "status": "return",
+          "payload": {
+            "readable": "null"
+          }
+        }
+      }
+    ],
+    "validators": [
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "agree"
+      },
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "agree"
+      },
+      {
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "Validator execution cancelled after quorum",
+          "stdout": "",
+          "raw_error": {
+            "fatal": false,
+            "causes": [
+              "VALIDATOR_QUORUM_REACHED"
+            ]
+          },
+          "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+        },
+        "mode": "validator",
+        "vote": "idle"
+      },
+      {
+        "execution_result": "SUCCESS",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "disagree"
+      }
+    ]
+  },
+  "gaslimit": 3,
+  "nonce": 3,
+  "created_at": "2026-10-05T15:05:06.728819+00:00",
+  "leader_only": false,
+  "execution_mode": "NORMAL",
+  "origin_address": "0xd66533615453eC05211F9cAD37dE77129F1E26A5",
+  "triggered_on": null,
+  "appeal_validators_timeout": false,
+  "sim_config": {
+    "signed_rollup_transaction": "0xf9022903808307a12094b7278a61aa25c888815afc32ad3cc52ff24fe57580b901c427241a99000000000000000000000000d66533615453ec05211f9cad37de77129f1e26a5000000000000000000000000dbf83c382aae585fb3f79aa8b770833701c164c20000000000000000000000000000000000000000000000000000000000000005000000000000000000000000000000000000000000000000000000000000000300000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000e1f8dfb8dc16046172677315a40868747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6d616864696461617773682d636f6d6d6974732f6e657474696e672d6465736b2f306636313032383332306265353732623638346663636337346437626162656633353064346630612f7265636f7264732f636f6e646974696f6e616c2e6a736f6e840436666464366666653431663634313531303938326539373536326135636564373963653336333935633836653435653536336334656135643062613561336433066d6574686f642c636c65617200000000000000000000000000000000000000000000000000000000000000008301e481a0b37c086d50e154c0512bbf18f9cc6effaee7638ed67c150a055d8d66fcd55cdda05364a8a1ba35c421d0abb96044ec1331ccfceb9046d12d808d20e9ca49a9e72d"
+  },
+  "value_credited": false,
+  "sender": "0xd66533615453eC05211F9cAD37dE77129F1E26A5",
+  "recipient": "0xDBf83c382Aae585FB3f79Aa8b770833701C164c2",
+  "tx_id": "0x8f4d1055b89a6b33fac38eeacd5fcebcde546faa41e4b8be67781a03495f231c",
+  "activator": "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100",
+  "last_leader": "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100",
+  "result_name": "MAJORITY_AGREE",
+  "num_of_rounds": "1",
+  "last_round": {
+    "round": "0",
+    "leader_index": "0",
+    "votes_committed": "5",
+    "votes_revealed": "5",
+    "appeal_bond": "0",
+    "rotations_left": "3",
+    "result": 6,
+    "round_validators": [
+      "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100",
+      "0x36728d2a123aB444E603EE5b2ad17d18Bb193557",
+      "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47",
+      "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC",
+      "0xE6BD8050758CB15fC88387223E31Ae2708B119dC"
+    ],
+    "validator_votes_hash": [
+      "0x45058369e3589baaf34454a1351e90241f3ffd5d93bbfc032045116464ac861a",
+      "0x585075e6628585e2866b670aa7bd805fad83ba487bd48cb150ec8394095cc0a2",
+      "0x3c94cc43682e269042aef7603877c8939e0596c60c0ee7bee4053f383de4895f",
+      "0x8ad93121391eeded94dbce55403600e7848f5e58ecebc4fdbbcf52179d482807",
+      "0x7f68bb599a1cc1c4e20fb8bbd6bbd2c8c85631e462acd6936598fb0c6b01c378"
+    ],
+    "validator_votes": [
+      1,
+      1,
+      1,
+      5,
+      2
+    ],
+    "validator_votes_name": [
+      "AGREE",
+      "AGREE",
+      "AGREE",
+      "IDLE",
+      "DISAGREE"
+    ]
+  },
+  "type": 2,
+  "status_name": "FINALIZED"
+}

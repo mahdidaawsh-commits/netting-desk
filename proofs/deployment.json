@@ -1,0 +1,53 @@
+{
+  "network": "studionet",
+  "chain_id": 61999,
+  "contract_address": "0xDBf83c382Aae585FB3f79Aa8b770833701C164c2",
+  "source_sha256": "fdb24f25841a8fad5fc7c831868556bf2878a9ffd336083d4e303648288eb19f",
+  "exact_source_match": true,
+  "fixture_revision": "0f61028320be572b684fccc74d7babef350d4f0a",
+  "sources": {
+    "ring": {
+      "url": "https://raw.githubusercontent.com/mahdidaawsh-commits/netting-desk/0f61028320be572b684fccc74d7babef350d4f0a/records/ring.json",
+      "sha256": "7a5fd1d6bc9ec9c1ed29ef768cd48deb8896866bdd9e5278dcddc9c50637a8b8"
+    },
+    "protected": {
+      "url": "https://raw.githubusercontent.com/mahdidaawsh-commits/netting-desk/0f61028320be572b684fccc74d7babef350d4f0a/records/protected.json",
+      "sha256": "17f8969b07472b8679972bfd3cbe711ed030a89168b7c4e74335097cf45749b6"
+    },
+    "competing": {
+      "url": "https://raw.githubusercontent.com/mahdidaawsh-commits/netting-desk/0f61028320be572b684fccc74d7babef350d4f0a/records/competing.json",
+      "sha256": "e04d3c423e5b139e60cb5e09c481e4f8f9ab028618f2a696ab8db367576ea362"
+    },
+    "conditional": {
+      "url": "https://raw.githubusercontent.com/mahdidaawsh-commits/netting-desk/0f61028320be572b684fccc74d7babef350d4f0a/records/conditional.json",
+      "sha256": "6fdd6ffe41f641510982e97562a5ced79ce36395c86e45e563c4ea5d0ba5a3d3"
+    }
+  },
+  "transactions": [
+    {
+      "label": "pool-deploy",
+      "action": "deploy",
+      "hash": "0x6276c771983cf49f1d0dd52bd7abc09a78fb87939411139f9f294dc1c48817e0"
+    },
+    {
+      "label": "ring",
+      "action": "clear",
+      "hash": "0xc4647481ccbd46eb6a1c3ed15504cdcefbd0e1cf896a35c7ff00420443d3762b"
+    },
+    {
+      "label": "protected",
+      "action": "clear",
+      "hash": "0x4f949058066933f5cfb72fed3708e01e8954e9e8a89742e4ca281ea4a3cdec76"
+    },
+    {
+      "label": "competing",
+      "action": "clear",
+      "hash": "0x35faf53fe72a5cdfceac792c4be45c1c736f187fa2cd786bfa9610570494b074"
+    },
+    {
+      "label": "conditional",
+      "action": "clear",
+      "hash": "0x8f4d1055b89a6b33fac38eeacd5fcebcde546faa41e4b8be67781a03495f231c"
+    }
+  ]
+}

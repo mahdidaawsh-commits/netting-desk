@@ -1,0 +1,337 @@
+{
+  "network": "studionet",
+  "chain_id": 61999,
+  "contract_address": "0xDBf83c382Aae585FB3f79Aa8b770833701C164c2",
+  "source_sha256": "fdb24f25841a8fad5fc7c831868556bf2878a9ffd336083d4e303648288eb19f",
+  "fixture_revision": "0f61028320be572b684fccc74d7babef350d4f0a",
+  "transaction": {
+    "label": "competing",
+    "action": "clear",
+    "hash": "0x35faf53fe72a5cdfceac792c4be45c1c736f187fa2cd786bfa9610570494b074"
+  },
+  "state": {
+    "batches": [
+      {
+        "record": {
+          "positions": [
+            {
+              "amount": 6,
+              "clause": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required.",
+              "id": "alpha-beta"
+            },
+            {
+              "amount": 0,
+              "clause": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required.",
+              "id": "alpha-gamma"
+            },
+            {
+              "amount": 0,
+              "clause": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required.",
+              "id": "beta-alpha"
+            },
+            {
+              "amount": 4,
+              "clause": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required.",
+              "id": "beta-gamma"
+            },
+            {
+              "amount": 5,
+              "clause": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required.",
+              "id": "gamma-alpha"
+            },
+            {
+              "amount": 0,
+              "clause": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required.",
+              "id": "gamma-beta"
+            }
+          ]
+        },
+        "report": {
+          "permissions": [
+            {
+              "decision": "ALLOW",
+              "id": "alpha-beta",
+              "quote": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required."
+            },
+            {
+              "decision": "ALLOW",
+              "id": "alpha-gamma",
+              "quote": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required."
+            },
+            {
+              "decision": "ALLOW",
+              "id": "beta-alpha",
+              "quote": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required."
+            },
+            {
+              "decision": "ALLOW",
+              "id": "beta-gamma",
+              "quote": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required."
+            },
+            {
+              "decision": "ALLOW",
+              "id": "gamma-alpha",
+              "quote": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required."
+            },
+            {
+              "decision": "ALLOW",
+              "id": "gamma-beta",
+              "quote": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required."
+            }
+          ]
+        },
+        "result": {
+          "canceled_gross": 12,
+          "excluded": [],
+          "gross_after": 3,
+          "gross_before": 15,
+          "net_after": {
+            "alpha": -1,
+            "beta": 2,
+            "gamma": -1
+          },
+          "net_before": {
+            "alpha": -1,
+            "beta": 2,
+            "gamma": -1
+          },
+          "reductions": [
+            4,
+            0,
+            0,
+            4,
+            4,
+            0
+          ],
+          "remaining": [
+            2,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "status": "NETTED"
+        },
+        "sha256": "7a5fd1d6bc9ec9c1ed29ef768cd48deb8896866bdd9e5278dcddc9c50637a8b8",
+        "url": "https://raw.githubusercontent.com/mahdidaawsh-commits/netting-desk/0f61028320be572b684fccc74d7babef350d4f0a/records/ring.json"
+      },
+      {
+        "record": {
+          "positions": [
+            {
+              "amount": 6,
+              "clause": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required.",
+              "id": "alpha-beta"
+            },
+            {
+              "amount": 0,
+              "clause": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required.",
+              "id": "alpha-gamma"
+            },
+            {
+              "amount": 0,
+              "clause": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required.",
+              "id": "beta-alpha"
+            },
+            {
+              "amount": 4,
+              "clause": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required.",
+              "id": "beta-gamma"
+            },
+            {
+              "amount": 5,
+              "clause": "This obligation must be paid gross. It must never be canceled or included in multilateral netting.",
+              "id": "gamma-alpha"
+            },
+            {
+              "amount": 0,
+              "clause": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required.",
+              "id": "gamma-beta"
+            }
+          ]
+        },
+        "report": {
+          "permissions": [
+            {
+              "decision": "ALLOW",
+              "id": "alpha-beta",
+              "quote": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required."
+            },
+            {
+              "decision": "ALLOW",
+              "id": "alpha-gamma",
+              "quote": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required."
+            },
+            {
+              "decision": "ALLOW",
+              "id": "beta-alpha",
+              "quote": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required."
+            },
+            {
+              "decision": "ALLOW",
+              "id": "beta-gamma",
+              "quote": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required."
+            },
+            {
+              "decision": "DENY",
+              "id": "gamma-alpha",
+              "quote": "This obligation must be paid gross. It must never be canceled or included in multilateral netting."
+            },
+            {
+              "decision": "ALLOW",
+              "id": "gamma-beta",
+              "quote": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required."
+            }
+          ]
+        },
+        "result": {
+          "canceled_gross": 0,
+          "excluded": [
+            {
+              "id": "gamma-alpha",
+              "reason": "DENY"
+            }
+          ],
+          "gross_after": 15,
+          "gross_before": 15,
+          "net_after": {
+            "alpha": -1,
+            "beta": 2,
+            "gamma": -1
+          },
+          "net_before": {
+            "alpha": -1,
+            "beta": 2,
+            "gamma": -1
+          },
+          "reductions": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "remaining": [
+            6,
+            0,
+            0,
+            4,
+            5,
+            0
+          ],
+          "status": "UNCHANGED"
+        },
+        "sha256": "17f8969b07472b8679972bfd3cbe711ed030a89168b7c4e74335097cf45749b6",
+        "url": "https://raw.githubusercontent.com/mahdidaawsh-commits/netting-desk/0f61028320be572b684fccc74d7babef350d4f0a/records/protected.json"
+      },
+      {
+        "record": {
+          "positions": [
+            {
+              "amount": 4,
+              "clause": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required.",
+              "id": "alpha-beta"
+            },
+            {
+              "amount": 0,
+              "clause": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required.",
+              "id": "alpha-gamma"
+            },
+            {
+              "amount": 4,
+              "clause": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required.",
+              "id": "beta-alpha"
+            },
+            {
+              "amount": 4,
+              "clause": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required.",
+              "id": "beta-gamma"
+            },
+            {
+              "amount": 4,
+              "clause": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required.",
+              "id": "gamma-alpha"
+            },
+            {
+              "amount": 0,
+              "clause": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required.",
+              "id": "gamma-beta"
+            }
+          ]
+        },
+        "report": {
+          "permissions": [
+            {
+              "decision": "ALLOW",
+              "id": "alpha-beta",
+              "quote": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required."
+            },
+            {
+              "decision": "ALLOW",
+              "id": "alpha-gamma",
+              "quote": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required."
+            },
+            {
+              "decision": "ALLOW",
+              "id": "beta-alpha",
+              "quote": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required."
+            },
+            {
+              "decision": "ALLOW",
+              "id": "beta-gamma",
+              "quote": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required."
+            },
+            {
+              "decision": "ALLOW",
+              "id": "gamma-alpha",
+              "quote": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required."
+            },
+            {
+              "decision": "ALLOW",
+              "id": "gamma-beta",
+              "quote": "This obligation may be canceled in a multilateral clearing batch that preserves each party's net balance. No additional approval is required."
+            }
+          ]
+        },
+        "result": {
+          "canceled_gross": 12,
+          "excluded": [],
+          "gross_after": 4,
+          "gross_before": 16,
+          "net_after": {
+            "alpha": 4,
+            "beta": -4,
+            "gamma": 0
+          },
+          "net_before": {
+            "alpha": 4,
+            "beta": -4,
+            "gamma": 0
+          },
+          "reductions": [
+            4,
+            0,
+            0,
+            4,
+            4,
+            0
+          ],
+          "remaining": [
+            0,
+            0,
+            4,
+            0,
+            0,
+            0
+          ],
+          "status": "NETTED"
+        },
+        "sha256": "e04d3c423e5b139e60cb5e09c481e4f8f9ab028618f2a696ab8db367576ea362",
+        "url": "https://raw.githubusercontent.com/mahdidaawsh-commits/netting-desk/0f61028320be572b684fccc74d7babef350d4f0a/records/competing.json"
+      }
+    ],
+    "source_repository": "mahdidaawsh-commits/netting-desk"
+  }
+}
